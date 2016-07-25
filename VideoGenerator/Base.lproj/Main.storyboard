@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dN5-MT-m2W">
+                                <rect key="frame" x="20" y="323" width="560" height="30"/>
+                                <state key="normal" title="PLAY AUDIO"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZx-El-Urm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcY-Sn-wub">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <state key="normal" title="RECORD AUDIO"/>
+                                <connections>
+                                    <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3gF-4j-4Ea"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyM-3b-nst">
+                                <rect key="frame" x="20" y="361" width="560" height="30"/>
+                                <state key="normal" title="BUILD VIDEO"/>
+                                <connections>
+                                    <action selector="buildButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ndc-q4-WRx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKu-2C-lhn">
+                                <rect key="frame" x="20" y="399" width="560" height="30"/>
+                                <state key="normal" title="PLAY VIDEO"/>
+                                <connections>
+                                    <action selector="playVideoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zXx-vj-UK9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bcY-Sn-wub" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5OB-Vy-MWe"/>
+                            <constraint firstItem="bcY-Sn-wub" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6dn-fk-VYJ"/>
+                            <constraint firstItem="dN5-MT-m2W" firstAttribute="trailing" secondItem="XyM-3b-nst" secondAttribute="trailing" id="77w-e9-SYW"/>
+                            <constraint firstItem="EKu-2C-lhn" firstAttribute="top" secondItem="XyM-3b-nst" secondAttribute="bottom" constant="8" symbolic="YES" id="AcG-0H-vPK"/>
+                            <constraint firstItem="dN5-MT-m2W" firstAttribute="leading" secondItem="XyM-3b-nst" secondAttribute="leading" id="H27-PW-odf"/>
+                            <constraint firstItem="bcY-Sn-wub" firstAttribute="leading" secondItem="dN5-MT-m2W" secondAttribute="leading" id="LFm-dy-veO"/>
+                            <constraint firstItem="XyM-3b-nst" firstAttribute="top" secondItem="dN5-MT-m2W" secondAttribute="bottom" constant="8" symbolic="YES" id="McT-Le-bFQ"/>
+                            <constraint firstItem="dN5-MT-m2W" firstAttribute="top" secondItem="bcY-Sn-wub" secondAttribute="bottom" constant="8" symbolic="YES" id="bfN-Tj-gKJ"/>
+                            <constraint firstItem="XyM-3b-nst" firstAttribute="trailing" secondItem="EKu-2C-lhn" secondAttribute="trailing" id="bvX-VE-PBh"/>
+                            <constraint firstItem="XyM-3b-nst" firstAttribute="leading" secondItem="EKu-2C-lhn" secondAttribute="leading" id="j2k-9h-L3P"/>
+                            <constraint firstItem="bcY-Sn-wub" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kfe-4Q-4J9"/>
+                            <constraint firstItem="bcY-Sn-wub" firstAttribute="trailing" secondItem="dN5-MT-m2W" secondAttribute="trailing" id="pTT-58-MNM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buildButton" destination="XyM-3b-nst" id="1f8-1k-nv6"/>
+                        <outlet property="playButton" destination="dN5-MT-m2W" id="EJo-I6-TSd"/>
+                        <outlet property="playVideoButton" destination="EKu-2C-lhn" id="pb6-Ch-rPn"/>
+                        <outlet property="recordButton" destination="bcY-Sn-wub" id="1zv-53-r6v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="335"/>
+        </scene>
+        <!--Video Generator View Controller-->
+        <scene sceneID="c9E-Ht-6dZ">
+            <objects>
+                <viewController id="rfk-VE-2db" customClass="VideoGeneratorViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pXF-5X-kIm"/>
+                        <viewControllerLayoutGuide type="bottom" id="vEf-va-3ag"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8fx-X8-zRm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0l-ke-U9F">
+                                <rect key="frame" x="283" y="285" width="35" height="30"/>
+                                <state key="normal" title="Build"/>
+                                <connections>
+                                    <action selector="buildPLS:" destination="rfk-VE-2db" eventType="touchUpInside" id="ESl-yy-QIl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p0l-ke-U9F" firstAttribute="centerY" secondItem="8fx-X8-zRm" secondAttribute="centerY" id="CSU-v4-y3U"/>
+                            <constraint firstItem="p0l-ke-U9F" firstAttribute="centerX" secondItem="8fx-X8-zRm" secondAttribute="centerX" id="Jhu-qm-ehf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nvf-tw-bJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="1095"/>
+        </scene>
+    </scenes>
+</document>
